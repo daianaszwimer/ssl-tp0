@@ -9,7 +9,8 @@ int main(){
 	int constantesEnteras = 0;
 	int identificadores = 0;
 	int errores = 0;
-	
+    
+	printf("Ingrese cadena\n");	
 	while(token != 'f'){	//token distinto de fin (fin de entrada) 
 		token = reconocer();
 		switch(token){
