@@ -2,9 +2,9 @@
 #include "scanner.h"
 
 /*basicamente voy llamando a la funcion reconocer que dado un input me devuelve i si encuentra un identificador, c = constante entera,
-e=error, y con f digo que dejé de recibir datos*/
+e=error, y con f digo que dejï¿½ de recibir datos*/
 
-main(){
+int main(){
 	char token;
 	int constantesEnteras = 0;
 	int identificadores = 0;
@@ -34,4 +34,5 @@ main(){
 	printf("Identificadores %d \n", identificadores);
 	printf("Constantes enteras %d \n", constantesEnteras);
 	printf("Errores %d", errores);
+    return 0;
 }
