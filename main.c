@@ -2,7 +2,7 @@
 #include "scanner.h"
 
 /*basicamente voy llamando a la funcion reconocer que dado un input me devuelve i si encuentra un identificador, c = constante entera,
-e=error, y con f digo que dej� de recibir datos*/
+e=error, y con f digo que deje de recibir datos*/
 
 int main(){
 	char token;
