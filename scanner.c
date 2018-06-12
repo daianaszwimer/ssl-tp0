@@ -13,16 +13,32 @@ Espero que se entienda la idea, para mi que satisface la consigna*/
 
 char reconocer(){
 	char caracter;
-	do{
+	char tipo = 'a';
+	scanf("%c",&caracter);
+	//no sale nunca del while!?
+	while(caracter != 46){ //defini un caracter con el que terminamos la cadena
 		scanf("%c",&caracter);
-		if (caracter<= 10 && caracter >= 0){//si es un num, chequear que los siguientes lo sean tambien hasta el espacio, sino, puede ser identificador
-			while(caracter<= 10 && caracter >= 0){
-
+		//printf("%c\n", tipo);
+		if (tipo != 'e'){
+			if (caracter <= 57 && caracter >= 48){
+				if (tipo != 'i'){
+					tipo = 'c';
+				}
+			}else if ((caracter >= 65 && caracter <= 90) || (caracter <= 122 && caracter >= 97)){
+				tipo = 'i';
+			}else if (caracter == 32 || caracter == 46){//si hay espacio o es fin de cadena
+				return tipo;
+			}else if (caracter == 46){
+				//nada
+				//intentar sacar esto, no me gusta
+				//pero no encontre otra alternativa
+			}else{
+				tipo = 'e';
 			}
-			//si sale de este while y no hay un espacio, ya no es constante entera
-			//hay que ver si es identificador
+		}else{
+			tipo = 'a'; //hack para limpiar variable, buscar alternativa
+			return 'e';
 		}
-		return 'i';
-
-	}while(caracter!='.'); //defini un caracter con el que terminamos la cadena
+	}
+	return 'f';
 }
