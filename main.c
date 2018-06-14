@@ -34,6 +34,6 @@ int main(){
 	printf("Totales:\n");
 	printf("Identificadores %d \n", identificadores);
 	printf("Constantes enteras %d \n", constantesEnteras);
-	printf("Errores %d", errores);
+	printf("Errores %d \n", errores);
     return 0;
 }
