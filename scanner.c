@@ -13,18 +13,22 @@ Espero que se entienda la idea, para mi que satisface la consigna*/
 
 char reconocer(){
 	char caracter;
+	// Espacio/Tabulador.
 	do{
 		scanf("%c",&caracter);
 	}while(caracter == 32)
 	if(caracter == '\n'){
+		// Enter.
 		return 'f';
 	}else{
+		// Constante entera.
 		if(caracter >= 48 && caracter <= 57){
 			do{
 				scanf("%c",&caracter);
 			}while(caracter >= 48 && caracter <= 57);
 			if(caracter == 32 || caracter == '\n')
 				return 'c';
+		// Identificador.
 		}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
 			do{
 				scanf("%c",&caracter);
