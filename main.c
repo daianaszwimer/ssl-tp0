@@ -8,8 +8,7 @@
   5 = error, 6 = error + fin de línea
   7 = fin de línea
   Itero realizando la incrementación de cada variable correspondientemente al caso mientras el resto de la división del número
-  retornado sea distinto a 1,
-  ya que dado ese caso se trata de un fin de línea.*/
+  retornado por 2 sea distinto a 1,  ya que dado ese caso se trata de un fin de línea.*/
 
 int main(){
 	int token;
