@@ -21,6 +21,7 @@ char reconocer(){
 		tipo = 'c';
 	}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
 		tipo = 'i';
+	}
 	do{
 		scanf("%c",&caracter);
 	}while(!(caracter == 32 || caracter == '\n'));
