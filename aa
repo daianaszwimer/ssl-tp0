@@ -1,7 +1,7 @@
 
 
 int TABLA_TRANSICIONES [8][5] =
-                                    //L,  D,  S,  E,    fdc
+                                    //L,  D,  S,  E,    
                                     {{1,  2,  3,  0},    // 0 estado inicial
                                     { 1,  1,  3,  101},    //1 reconociendo identificador
                                     { 3,  2,  3,  102},    //2 reconociendo constante entera
@@ -12,12 +12,12 @@ int TABLA_TRANSICIONES [8][5] =
                                     };
 int scanner(){
 
-	char c;
+    char c;
     int estado = 0;
 
     while (estado < 99){
         c = getchar();
-		int auxiliar = tipoDeCaracter(c);
+	int auxiliar = tipoDeCaracter(c);
         estado = TABLA_TRANSICIONES[estado][auxiliar];
     }
 
