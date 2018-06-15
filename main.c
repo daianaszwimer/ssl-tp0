@@ -1,35 +1,38 @@
 #include <stdio.h>
 #include "scanner.h"
 
-/*basicamente voy llamando a la funcion reconocer que dado un input me devuelve i si encuentra un identificador, c = constante entera,
-e=error, y con f digo que deje de recibir datos*/
+/*Modifiqué la función de formato char a int para realizar una validación con la utilización de orden númerico, logrando una no repetición de código.
+  1 = constante entera, 2= constante entera + fin de archivo
+  3 = identificador, 4 = identificador + fin de archivo
+  5 = error, 6 = error y fin de archivo
+  7 = fin de archivo
+  Itero realizando la incrementación de cada variable correspondientemente al caso mientras el resto de la división del número retornado sea distinto a 1,
+  ya que dado ese caso se trata de un fin de archivo.*/
 
 int main(){
-	char token;
+	int token;
 	int constantesEnteras = 0;
 	int identificadores = 0;
 	int errores = 0;
-    
-	printf("Ingrese cadena\n");	
-	while(token != 'f'){	//token distinto de fin (fin de entrada) 
+	
+	printf("Ingreso:\n");
+	do{
 		token = reconocer();
-		switch(token){
-			case 'i': //caso identificador
-				printf("identificador\n");
-				identificadores++;
-				break;
-			case 'c': //caso constante entera
+		// Constante entera.
+		if(token < 3){
 				printf("constante entera\n");
 				constantesEnteras++;
-				break;
-			case 'e': //caso error
+		// Identificador.
+		}else if(token < 5){
+				printf("identificador\n");
+				identificadores++;
+		// Error.
+		}else if(token < 7){
 				printf("error\n");
 				errores++;
-				break;
-			default:
-				break;
 		}
-	}
+	}while(token % 2 == 0);
+	
 	printf("----\n");
 	printf("Totales:\n");
 	printf("Identificadores %d \n", identificadores);
