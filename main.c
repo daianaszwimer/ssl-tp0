@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include "scanner.h"
 
-/*Modifiqué la función de formato char a int para realizar una validación con la utilización de orden númerico, logrando una no repetición de código.
+/*Modifiqué la función de formato char a int para realizar una validación con la utilización de orden númerico, logrando una no
+ repetición de código.
   1 = constante entera, 2= constante entera + fin de línea
   3 = identificador, 4 = identificador + fin de línea
   5 = error, 6 = error + fin de línea
-  7 = fin de archivo
-  Itero realizando la incrementación de cada variable correspondientemente al caso mientras el resto de la división del número retornado sea distinto a 1,
+  7 = fin de línea
+  Itero realizando la incrementación de cada variable correspondientemente al caso mientras el resto de la división del número
+  retornado sea distinto a 1,
   ya que dado ese caso se trata de un fin de línea.*/
 
 int main(){
