@@ -39,10 +39,10 @@ int reconocer(){
 	// Error/Error y Enter.
 	do{
 		scanf("%c",&caracter);
-	}while(caracter != 32 && caracter != '\n');
+	}while(!((caracter >= 48 && caracter <= 57) || (caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122) || (caracter == 32 ) || (caracter == '\n')));
 	if(caracter == '\n'){
 		return 5;
-	}else if(caracter == 32){
+	}else{
 		return 6;
-	}
+	}	
 }
