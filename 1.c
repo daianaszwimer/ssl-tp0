@@ -1,13 +1,39 @@
 char reconocer(){
 	char caracter;
-	char tipo = 'a';
-	do{ //defini un caracter con el que terminamos la cadena
+	char tipo = '';
+	
+	
+	if(caracter >= 48 && caracter <= 57){
+		tipo = 'c';
+	}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
+		tipo = 'i';
+	}else{
+		tipo = 'e';
+	}	
+	do{
 		scanf("%c",&caracter);
-		if(caracter >= 48 && caracter <= 57){
-			tipo = 'c';
-	   	}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
+	}while(not (caracter == 32 || caracter == '\n'))
+	return tipo;
 		
 		
+		
+		
+		
+		
+		
+		
+			}else{
+				tipo = 'e';
+			}
+		
+		
+		
+		
+		
+	}while(caracter != '\n');	
+		
+	
+	do{	
 		
 		if (tipo != 'e'){
 			
@@ -30,7 +56,7 @@ char reconocer(){
 			tipo = 'a'; //hack para limpiar variable, buscar alternativa
 			return 'e';
 		}
-	}while(caracter != '\n');
+	
 	//no llega aca arreglarlo
 	return 'f';		
 }
