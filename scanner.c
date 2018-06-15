@@ -14,9 +14,8 @@ Espero que se entienda la idea, para mi que satisface la consigna*/
 char reconocer(){
 	char caracter;
 	char tipo = 'e';
-	do{
+	while(caracter == 32}
 		scanf("%c",&caracter);
-	}while(caracter == 32)
 	if(caracter == '\n'){
 		return 'f'
 	}else{
@@ -32,9 +31,5 @@ char reconocer(){
 			if((caracter == 32 || caracter == '\n'))
 				tipo = 'i';
 		}		
-	}			
-	if(caracter == 32){
-		return tipo;
-	}else{
-		return 'f';		
 	}
+	return tipo;
