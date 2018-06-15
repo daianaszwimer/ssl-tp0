@@ -12,7 +12,7 @@ ES UN IDENTIFICADOR O CONSTANTE ENTERA O ERROR
 Espero que se entienda la idea, para mi que satisface la consigna*/
 
 char reconocer(){
-	char caracter;
+	char caracter = 32;
 	char tipo = 'e';
 	while(caracter == 32}
 		scanf("%c",&caracter);
