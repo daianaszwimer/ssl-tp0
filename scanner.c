@@ -12,11 +12,10 @@ ES UN IDENTIFICADOR O CONSTANTE ENTERA O ERROR
 Espero que se entienda la idea, para mi que satisface la consigna*/
 
 char reconocer(){
-	char caracter = 32;
-	char tipo = 'e';
-	while(caracter == 32){
+	char caracter;
+	do{
 		scanf("%c",&caracter);
-	}
+	}while(caracter == 32)
 	if(caracter == '\n'){
 		return 'f';
 	}else{
@@ -24,16 +23,16 @@ char reconocer(){
 			do{
 				scanf("%c",&caracter);
 			}while(caracter >= 48 && caracter <= 57);
-			if((caracter == 32 || caracter == '\n'))
-				tipo = 'c';
+			if(caracter == 32 || caracter == '\n')
+				return 'c';
 		}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
 			do{
-			scanf("%c",&caracter);
+				scanf("%c",&caracter);
 			}while((caracter >= 48 && caracter <= 57) || (caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122));
 			if(caracter == 32 || caracter == '\n'){
-				tipo = 'i';
+				return 'i';
 			}
 		}		
 	}
-	return tipo;
+	return 'e';
 }
