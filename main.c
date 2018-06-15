@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "scanner.h"
 
-/*Modifiqué la función de formato char a int para realizar una validación con la utilización de orden númerico, logrando una no repetición de código.
+/*ModifiquÃ© la funciÃ³n de formato char a int para realizar una validaciÃ³n con la utilizaciÃ³n de orden nÃºmerico, logrando una no repeticiÃ³n de cÃ³digo.
   1 = constante entera, 2= constante entera + fin de archivo
   3 = identificador, 4 = identificador + fin de archivo
   5 = error, 6 = error y fin de archivo
   7 = fin de archivo
-  Itero realizando la incrementación de cada variable correspondientemente al caso mientras el resto de la división del número retornado sea distinto a 1,
+  Itero realizando la incrementaciÃ³n de cada variable correspondientemente al caso mientras el resto de la divisiÃ³n del nÃºmero retornado sea distinto a 1,
   ya que dado ese caso se trata de un fin de archivo.*/
 
 int main(){
@@ -31,6 +31,7 @@ int main(){
 				printf("error\n");
 				errores++;
 		}
+	// Fin de lÃ­nea.
 	}while(token % 2 == 0);
 	
 	printf("----\n");
