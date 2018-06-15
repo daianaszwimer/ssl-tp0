@@ -13,7 +13,7 @@ Espero que se entienda la idea, para mi que satisface la consigna*/
 
 char reconocer(){
 	char caracter;
-	char tipo = 'a';
+	char tipo = 'e';
 	do{
 		scanf("%c",&caracter);
 	}while(caracter == 32);
@@ -21,9 +21,6 @@ char reconocer(){
 		tipo = 'c';
 	}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
 		tipo = 'i';
-	}else{
-		tipo = 'e';
-	}	
 	do{
 		scanf("%c",&caracter);
 	}while(!(caracter == 32 || caracter == '\n'));
