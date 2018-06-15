@@ -16,7 +16,7 @@ char reconocer(){
 	// Espacio/Tabulador.
 	do{
 		scanf("%c",&caracter);
-	}while(caracter == 32)
+	}while(caracter == 32);
 	if(caracter == '\n'){
 		// Enter.
 		return 'f';
@@ -36,7 +36,8 @@ char reconocer(){
 			if(caracter == 32 || caracter == '\n'){
 				return 'i';
 			}
-		}		
+		}
 	}
+	// Error.
 	return 'e';
 }
