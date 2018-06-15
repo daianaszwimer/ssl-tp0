@@ -14,9 +14,6 @@ Espero que se entienda la idea, para mi que satisface la consigna*/
 char reconocer(){
 	char caracter;
 	char tipo = 'a';
-	char reconocer(){
-	char caracter;
-	char tipo = 'a';
 	do{
 		scanf("%c",&caracter);
 	}while(caracter == 32)
