@@ -3,13 +3,20 @@ char reconocer(){
 	char tipo = 'a';
 	do{ //defini un caracter con el que terminamos la cadena
 		scanf("%c",&caracter);
+		if(caracter >= 48 && caracter <= 57){
+			tipo = 'c';
+	   	}else if((caracter >= 65 && caracter <= 90) || (caracter >= 97 && caracter <= 122)){
+		
+		
+		
 		if (tipo != 'e'){
-			if (caracter <= 57 && caracter >= 48){
+			
 				if (tipo != 'i'){
-					tipo = 'c';
+					
 					while 
 				}
-			}else if ((caracter >= 65 && caracter <= 90) || (caracter <= 122 && caracter >= 97)){
+			
+			
 				tipo = 'i';
 			}else if (caracter == 32 || caracter == '\n'){//si hay espacio o es fin de entrada
 				//cuando hace este return, cuando vuelve a llamar
