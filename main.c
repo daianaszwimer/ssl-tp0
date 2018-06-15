@@ -2,12 +2,12 @@
 #include "scanner.h"
 
 /*Modifiqué la función de formato char a int para realizar una validación con la utilización de orden númerico, logrando una no repetición de código.
-  1 = constante entera, 2= constante entera + fin de archivo
-  3 = identificador, 4 = identificador + fin de archivo
-  5 = error, 6 = error y fin de archivo
+  1 = constante entera, 2= constante entera + fin de línea
+  3 = identificador, 4 = identificador + fin de línea
+  5 = error, 6 = error + fin de línea
   7 = fin de archivo
   Itero realizando la incrementación de cada variable correspondientemente al caso mientras el resto de la división del número retornado sea distinto a 1,
-  ya que dado ese caso se trata de un fin de archivo.*/
+  ya que dado ese caso se trata de un fin de línea.*/
 
 int main(){
 	int token;
@@ -20,16 +20,16 @@ int main(){
 		token = reconocer();
 		// Constante entera.
 		if(token < 3){
-				printf("constante entera\n");
-				constantesEnteras++;
+			printf("constante entera\n");
+			constantesEnteras++;
 		// Identificador.
 		}else if(token < 5){
-				printf("identificador\n");
-				identificadores++;
+			printf("identificador\n");
+			identificadores++;
 		// Error.
 		}else if(token < 7){
-				printf("error\n");
-				errores++;
+			printf("error\n");
+			errores++;
 		}
 	// Fin de línea.
 	}while(token % 2 == 0);
