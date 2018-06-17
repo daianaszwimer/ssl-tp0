@@ -65,6 +65,7 @@ enum token retornarToken (enum tabla estado){
 			return ERROR;
 			break;
         case FIN_DE_CADENA_RECONOCIDO:
+        default:
 			return FIN_DE_CADENA;
 			break;
 	}

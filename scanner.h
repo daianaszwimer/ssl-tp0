@@ -3,6 +3,8 @@
 #ifndef SCANNER_H_INCLUDED
 #define SCANNER_H_INCLUDED
 
+typedef enum { false, true } bool;
+
 enum token {IDENTIFICADOR, CONSTANTE_ENTERA, ERROR, FIN_DE_CADENA};
 enum tabla {ESTADO_INICIAL,
 			RECONOCIENDO_IDENTIFICADOR,

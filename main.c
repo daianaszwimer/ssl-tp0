@@ -24,6 +24,7 @@ int main(){
 				printf("error\n");
 				cantidadErrores++;
 				break;
+			default: break;
 		}
 	}
 
