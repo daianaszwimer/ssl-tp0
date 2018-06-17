@@ -8,7 +8,7 @@ int main(){
 	int cantidadConstantesEnteras = 0;
 	int cantidadErrores = 0;
     
-	printf("Ingrese cadena\n");	
+	printf("Ingrese cadena (para finalizar, ingrese un punto -> . )\n");	
 	while(t != FIN_DE_CADENA){	//token distinto de FIN_DE_CADENA (fin de entrada) 
 		t = reconocer();
 		switch(t){
