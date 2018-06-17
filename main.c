@@ -1,39 +1,36 @@
 #include <stdio.h>
 #include "scanner.h"
 
-/*basicamente voy llamando a la funcion reconocer que dado un input me devuelve i si encuentra un identificador, c = constante entera,
-e=error, y con f digo que deje de recibir datos*/
 
 int main(){
-	char token;
-	int constantesEnteras = 0;
-	int identificadores = 0;
-	int errores = 0;
+	enum token t = 0; //pongo un valor cualquiera para que comienze el ciclo
+	int cantidadIdentificadores = 0;
+	int cantidadConstantesEnteras = 0;
+	int cantidadErrores = 0;
     
 	printf("Ingrese cadena\n");	
-	while(token != 'f'){	//token distinto de fin (fin de entrada) 
-		token = reconocer();
-		switch(token){
-			case 'i': //caso identificador
+	while(t != FIN_DE_CADENA){	//token distinto de FIN_DE_CADENA (fin de entrada) 
+		t = reconocer();
+		switch(t){
+			case IDENTIFICADOR: //caso identificador
 				printf("identificador\n");
-				identificadores++;
+				cantidadIdentificadores++;
 				break;
-			case 'c': //caso constante entera
+			case CONSTANTE_ENTERA: //caso constante entera
 				printf("constante entera\n");
-				constantesEnteras++;
+				cantidadConstantesEnteras++;
 				break;
-			case 'e': //caso error
+			case ERROR: //caso error
 				printf("error\n");
-				errores++;
-				break;
-			default:
+				cantidadErrores++;
 				break;
 		}
 	}
+
 	printf("----\n");
 	printf("Totales:\n");
-	printf("Identificadores %d \n", identificadores);
-	printf("Constantes enteras %d \n", constantesEnteras);
-	printf("Errores %d \n", errores);
+	printf("Identificadores %d \n", cantidadIdentificadores);
+	printf("Constantes enteras %d \n", cantidadConstantesEnteras);
+	printf("Errores %d \n", cantidadErrores);
     return 0;
 }
