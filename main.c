@@ -1,6 +1,20 @@
+
+/*
+TP0 - 2018
+Un escáner elemental
+Grupo 02
+Integrantes:
+Esquivel Nehuén
+40241503
+Gomel Agustin
+1596263
+Peccia Diego
+1633156
+Szwimer Daiana Kalanit
+1632553
+*/
 #include <stdio.h>
 #include "scanner.h"
-
 
 int main(){
 	enum token t = 0; //pongo un valor cualquiera para que comienze el ciclo
@@ -8,7 +22,7 @@ int main(){
 	int cantidadConstantesEnteras = 0;
 	int cantidadErrores = 0;
     
-	printf("Ingrese cadena (para finalizar, ingrese un punto -> . )\n");	
+	printf("Ingrese cadena.\n");	
 	while(t != FIN_DE_CADENA){	//token distinto de FIN_DE_CADENA (fin de entrada) 
 		t = reconocer();
 		switch(t){
