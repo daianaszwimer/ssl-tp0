@@ -5,7 +5,7 @@ Un escáner elemental
 Grupo 02
 Integrantes:
 Esquivel Nehuén
-40241503
+1567469
 Gomel Agustin
 1596263
 Peccia Diego
